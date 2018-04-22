@@ -1,68 +1,217 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+
+
+
+
+		<div><img src="https://cdn2.iconfinder.com/data/icons/university-set-4/512/11-512.png" id="logo"></div>
+		<div class="header">
+		  <h1>Laurie Marie</h1>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<style>
-			body {
-				background-color: #ffffff;
-				margin: 0;
-				overflow: hidden;
-			}
+		.navbar {
+		    overflow: hidden;
+		    background-color: #806884;
+		    font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.navbar a {
+		    float: left;
+		    font-size: 16px;
+		    color: #3c3a3a;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+		}
+
+		.dropdown {
+		    float: left;
+		    overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+		    font-size: 16px;    
+		    border: none;
+		    outline: none;
+		    color: gray;
+		    padding: 14px 16px;
+		    background-color: #806884;
+		    font-family: inherit;
+		    margin: 0;
+		}
+
+		.navbar a:hover, .dropdown:hover .dropbtn {
+		    background-color: red;
+		}
+
+		.dropdown-content {
+		    display: none;
+		    position: absolute;
+		    background-color: #806884;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		    z-index: 1;
+		}
+
+		.dropdown-content a {
+		    float: none;
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		    text-align: left;
+		}
+
+		.dropdown-content a:hover {
+		    background-color: #806884;
+		}
+
+		.dropdown:hover .dropdown-content {
+		    display: block;
+		}
 		</style>
-	</head>
-	<body>
-		
-			<script src="js/three.min.js"></script>
-			<script src="js/Detector.js"></script>
-		<script>
+		</head>
+		<body>
 
-			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+		<div class="navbar">
+		  <a href="#home">Home</a>
+		  <a href="#news">News</a>
+		  <div class="dropdown">
+		    <button class="dropbtn">Dropdown 
+		      <i class="fa fa-caret-down"></i>
+		    </button>
+		    <div class="dropdown-content">
+		      <a href="#">Link 1</a>
+		      <a href="#">Link 2</a>
+		      <a href="#">Link 3</a>
+		    </div>
+		  </div> 
+		</div>
+
+		<div class="row">
+		  <div class="leftcolumn">
+		    <div class="card">
+		      <h2> <p>Welcome to my portfolio</p>
+		  		<h3>It's my first one ever, so bear with me...</h3>
+						<iframe src="sketch.html" id="sketch"></iframe>
 			
-			var camera, scene, renderer;
-			var geometry, material, mesh;
+		</div>
 
-			function setup() {
+	
+	
+		      	
+		      </h2>
+		      <h5>Title description, Dec 7, 2017</h5>
+		      <div class="fakeimg" style="height:200px;">Image</div>
+		    
+		    </div>
+		    <div class="card">
+		      <h2>TITLE HEADING</h2>
+		      <h5>Title description, Sep 2, 2017</h5>
+		      <div class="fakeimg" style="height:200px;">Image</div>
+		      <p>Some text..</p>
+		      <p></p>
+		    </div>
+		  </div>
+		  <div class="rightcolumn">
+		    <div class="card">
+		      <h2>About Me</h2>
+		      <div class="fakeimg" style="height:100px;">Image</div>
+		      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+		    </div>
+		    <div class="card">
+		     
+		    </div>
+		    <div class="card">
+		      <h3>Follow Me</h3>
+		      <p><a href="https://www.instagram.com/lauriemarte/">Link to my Instagram</a></p>
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
 
-				var W = window.innerWidth, H = window.innerHeight;
-				renderer = new THREE.WebGLRenderer();
-				renderer.setSize( W, H );
-				document.body.appendChild( renderer.domElement );
+.fa:hover {
+    opacity: 0.7;
+}
 
-				camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
-				camera.position.z = 500;
-
-				scene = new THREE.Scene();
-				
-				
-				// paste your code from the geometryGUI here
-				geometry = new THREE.TorusKnotGeometry(132.57, 175.71, 15, 100, 7.83, 7.68, 12.99);
-				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, wireframe: true, wireframeLinewidth: 1});
-				mesh = new THREE.Mesh(geometry, material);
-				mesh.scale.x = mesh.scale.y = mesh.scale.z = 2;
-				scene.add(mesh);
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
 
 
+.fa-instagram {
+  background: #8033a0;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
 
 
-			}
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
 
-			function draw() {
 
-				requestAnimationFrame( draw );
-				
-				// experiment with code from the snippets menu here
-				mesh.rotation.x = Date.now() * 0.0001;	
-				mesh.rotation.y = Date.now() * 0.0001;	
-				mesh.rotation.z = Date.now() * 0.00001;
+</style>
+</head>
+<body>
 
-				renderer.render( scene, camera );
 
-			}
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-linkedin"></a>
+<a href="https://www.instagram.com/lauriemarte/" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+<a href="lauriemarte.tumblr.com" class="fa fa-tumblr"></a>
+      
 
-			setup();
-			draw();
 
-		</script>
+
+		    </div>
+		  </div>
+		</div>
+
+		<div class="footer">
+		  <h2>Footer</h2>
+		</div>
+
+
 		
-	</body>
+	
+	<ul>
+	
+	</ul>
+
+
+	<p>This is some description about my work.</p>
+	<img src="images/render2.jpg">
+	
+	
+
+
+
+	
+	
+
+</body>
 </html>

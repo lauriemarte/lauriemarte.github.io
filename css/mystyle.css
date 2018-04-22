@@ -1,47 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Mina');
 
-
-<style>
-div.container {
-    width: 100%;
-    border: 1px solid gray;
+.content {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+ul {
+	background-color: grey;
+	margin-top: none;
+	font-size: 20px;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	
 }
 
-header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
+
+
+.block {
+    display: block;
+    width: 113%;
+    border: none;
+    background-color: #6f7072;
+    padding: 22px 28px;
+    font-size: 17px;
+    cursor: sw-resize;
     text-align: center;
 }
 
-nav {
-    float: left;
-    max-width: 160px;
-    margin: 0;
-    padding: 1em;
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: ##d6d0c9;
+	max-width: 100%; 
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-   
-nav ul a {
-    text-decoration: none;
+div {
+	width: 800px;
+	height: none;
+	margin: auto;
 }
 
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
+#logo {
+	width: 200px;
+	height: 200px;
+	display: block; /*for the img inside your div */  
+	margin-left: auto; 
+	margin-right: auto;
 }
-</style>
-h3 {
-	color; blue 
-	font-style: italic;
+
+
+
+ul li {
+	float: left ;
+	list-style-type: none;
+	padding-left: : 100px;
+	/* background-color:orange; */
+}
+
+ul li a {
+		color:white;
+		text-decoration: none;
+}
+
+ul li a:hover {
+	color:purple;
+	font-weight: bold;
 }
 
 h1 {
-	border:3px solid #1add24;
+	border:5px solid #5b4f60;
+	border-style: dotted dashed solid double;
+	width: 800px;
+	margin-left: 400px;
+	margin: 30px auto;
+	text-align: center;
+	padding: 30px;
+	font-family: 'Mina', sans-serif;
+	
+}
+
+.colorchange {
+	color: red;
+}
+
+h3 {
+	color: #b299b2; 
+	font-style: italic;
+
+}
+
+#sketch {
+	border: none;
+	width: 100vw;
+	height: 50vh;
+}
+
+#overwrite {
+	color:cyan;
 }
