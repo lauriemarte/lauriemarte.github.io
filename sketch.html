@@ -33,14 +33,15 @@
 
 				scene = new THREE.Scene();
 				
-				
-				// paste your code from the geometryGUI here
-				geometry = new THREE.TorusKnotGeometry(132.57, 175.71, 15, 100, 7.83, 7.68, 12.99);
-				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading, wireframe: true, wireframeLinewidth: 1});
+				geometry = new THREE.CylinderGeometry(35.51, 1, 161.01, 18, 50, false);
+				material = new THREE.MeshNormalMaterial({shading: THREE.FlatShading});
 				mesh = new THREE.Mesh(geometry, material);
-				mesh.scale.x = mesh.scale.y = mesh.scale.z = 2;
+				mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.94;
+				mesh.position.y = 39.7;
+				mesh.rotation.x = 6;
+				mesh.rotation.y = 2.29;
+				mesh.rotation.z = 6.35;
 				scene.add(mesh);
-
 
 
 
@@ -50,10 +51,9 @@
 
 				requestAnimationFrame( draw );
 				
-				// experiment with code from the snippets menu here
-				mesh.rotation.x = Date.now() * 0.0001;	
-				mesh.rotation.y = Date.now() * 0.0001;	
-				mesh.rotation.z = Date.now() * 0.00001;
+				mesh.rotation.x = Date.now() * 0.0005;	
+				mesh.rotation.y = Date.now() * 0.0002;	
+				mesh.rotation.z = Date.now() * 0.001;
 
 				renderer.render( scene, camera );
 
